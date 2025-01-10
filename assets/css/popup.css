@@ -1,0 +1,111 @@
+:root {
+    --light-background: hsl(0, 0%, 98%); /* cultured */
+    --primary-color: #982B1C; /* bright-navy-blue */
+    --secondary-color: #800000; /* yale-blue */
+    --text-color: hsl(0, 0%, 100%); /* black-coral */
+    --border-color: hsl(0, 0%, 60%); /* spanish-gray */
+}
+
+.body1 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-background);
+    color: var(--text-color);
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.popup-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+    z-index: 1;
+}
+
+.popup-form-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-form {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+.popup-form h2 {
+    margin: 0 0 15px;
+    color: var(--text-color);
+}
+
+.popup-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.popup-form input, 
+.popup-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 14px;
+    /* color: var(--secondary-color); */
+    background-color: rgb(255, 255, 255);
+
+}
+
+.popup-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.popup-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1000px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--text-color);
+}
